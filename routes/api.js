@@ -10,6 +10,7 @@ router.get('/api' , (req,res,next)=>{
 });
 
 router.post('/api' , (req,res,next)=>{
+    console.log(req.body);
     model.create(req.body).then(function(patient){
         res.send(patient); 
     }).catch(next);
