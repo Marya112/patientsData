@@ -2,6 +2,11 @@ const express = require ('express');
 const router = express.Router();
 const model = require('../models/patient');
 
+router.post('/new-reading' , (req,res,next) => {
+    const sensorData= new Patient();
+    res.send(sensorData);
+});
+
 router.get('/api' , (req,res,next)=>{
     model.find({}).then(function(patients){
         res.send(patients);
