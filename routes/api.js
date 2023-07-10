@@ -2,12 +2,7 @@ const express = require ('express');
 const router = express.Router();
 const model = require('../models/patient');
 
-router.post('/new-reading' , (req,res,next) => {
-    console.log("post");
-    console.log(req.body);
-    const sensorData= new Patient();
-    res.send(sensorData);
-});
+
 
 router.get('/api' , (req,res,next)=>{
      console.log("yy");
@@ -21,7 +16,9 @@ router.post('/api' , (req,res,next)=>{
         console.log(req.body);
         console.log("post");
     console.log(req.body);
-    model.create(req.body).then(function(patient){
+
+    const data = { ...req.body , date: new Date() }
+    model.create(data).then(function(patient){
         res.send(patient); 
     }).catch(next);
 });
