@@ -2,8 +2,11 @@ const express = require ('express');
 const routes = require('./routes/api');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+var cors = require('cors');
 
 const app = express();
+
+app.use(cors());
 
 mongoose.connect( "mongodb+srv://mariamagdy412:123@cluster0.oe1ktgn.mongodb.net/patients-app");
 mongoose.Promise=global.Promise;
