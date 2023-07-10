@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-mongoose.connect( "mongodb+srv://mariamagdy412:Apple1712112@cluster0.oe1ktgn.mongodb.net/patients-app");
+mongoose.connect( "mongodb+srv://mariamagdy412:123@cluster0.oe1ktgn.mongodb.net/patients-app");
 mongoose.Promise=global.Promise;
 
 app.use(express.static('../Frontend'));
