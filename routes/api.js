@@ -10,7 +10,7 @@ router.post('/new-reading' , (req,res,next) => {
 });
 
 router.get('/api' , (req,res,next)=>{
-     console.log("gjnhuet");
+     console.log("Ahmadt");
     model.find({}).then(function(patients){
         res.send(patients);
     });
