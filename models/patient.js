@@ -8,7 +8,8 @@ const PatientSchema = new schema({
     },
     HeartBeat:String,
     oxygonRate:String,
-    temp:String
+    temp:String,
+    date:Date
 });
 
 const Patient = mongoose.model('patients' , PatientSchema);
