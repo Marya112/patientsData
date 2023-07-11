@@ -2,10 +2,13 @@ const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
 const PatientSchema = new schema({
-    id:{
+    Dn:{
         type:Number,
         required:[true,'ID Field is required']
     },
+    Name:String,
+    Email:String,
+    Address:String,
     HeartBeat:String,
     oxygonRate:String,
     temp:String,
