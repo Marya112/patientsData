@@ -11,7 +11,7 @@ app.use(cors());
 mongoose.connect( "mongodb+srv://mariamagdy412:123@cluster0.oe1ktgn.mongodb.net/patients-app");
 mongoose.Promise=global.Promise;
 
-app.use(express.static('../Frontend'));
+//app.use(express.static('../Frontend'));
 
 app.use(bodyParser.json());
 app.use(routes);
