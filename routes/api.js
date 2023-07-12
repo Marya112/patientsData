@@ -4,29 +4,21 @@ const model = require('../models/patient');
 
 
 
-// router.get('/api' , (req,res,next)=>{
-//      console.log("get");
-//     model.find({}).then(function(patients){
-//         res.send(patients);
-//     });
-   
-// });
-
-router.post('/api' , (req,res,next)=>{
-   console.log("post");
-    router.get('/api' , (req,res,next)=>{
+router.get('/api' , (req,res,next)=>{
      console.log("get");
     model.find({}).then(function(patients){
         res.send(patients);
     });
    
 });
+
+router.post('/api' , (req,res,next)=>{
+   console.log("post");
    console.log(req.body);
-    const data = { ...req.body , date: new Date() }
-    model.create(data).then(function(patient){
+   const data = { ...req.body , date: new Date() }
+   model.create(data).then(function(patient){
         res.send(patient); 
-    }).catch(next);
-    
+    }).catch(next); 
 });
 
 router.put('/api/:id' , (req,res)=>{
