@@ -13,14 +13,12 @@ router.get('/api' , (req,res,next)=>{
 });
 
 router.post('/api' , (req,res,next)=>{
-        console.log(req.body);
         console.log("post");
-        console.log(req.body);
-
     const data = { ...req.body , date: new Date() }
     model.create(data).then(function(patient){
         res.send(patient); 
     }).catch(next);
+     console.log(data);
 });
 
 router.put('/api/:id' , (req,res)=>{
